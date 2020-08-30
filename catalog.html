@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerds</title>
+    <link rel="stylesheet" href="style-catalog.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navigation">
+                <img src="./img/nerds-logo.svg" alt="logo">
+                <ul class="links">
+                    <li class="links-item"><a href="#">Студия</a></li>
+                    <li class="links-item"><a href="#">Клиенты</a></li>
+                    <li class="links-item active"><a href="#">Магазин</a></li>
+                    <li class="links-item"><a href="#">Контакты</a></li>
+                </ul>
+                <button class="trash" type="button">Корзина</button>
+            </nav>
+            <section class="main-heading">
+                <h1>Магазин готовых шаблонов</h1>
+            </section>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="products">
+                <div class="pricing">
+                    <p class="section-name">Стоимость:</p>
+                    <div class="range-price">
+                        <div class="range">
+                            <div class="unselected-range">
+                                <div class="selected-range"></div>
+                                <span class="thumb thumb1"></span>
+                                <span class="thumb thumb2"></span>
+                            </div>
+                        </div>
+                        <div class="range-numbers">
+                            <span>От</span>
+                            <div class="price-count">0</div>
+                            <span>До</span>
+                            <div class="price-count">15 000</div>
+                        </div>
+                    </div>
+                    <p class="section-name">Сетка:</p>
+                    <input type="radio" name="grid" id="adaptive" checked>
+                    <label class="radio-props" for="adaptive">Адаптивная</label>
+                    <input type="radio" name="grid" id="fix">
+                    <label class="radio-props" for="fix">Фиксированная</label>
+                    <input type="radio" name="grid" id="responsive">
+                    <label class="radio-props" for="responsive">Резиновая</label>
+                    <p class="section-name">Особенности:</p>
+                    <input type="checkbox" name="specials" id="slider" checked>
+                    <label class="checkbox-props" for="slider">Слайдер</label>
+                    <input type="checkbox" name="specials" id="advantages">
+                    <label class="checkbox-props" for="advantages">Блок преимуществ</label>
+                    <input type="checkbox" name="specials" id="news">
+                    <label class="checkbox-props" for="news">Новости</label>
+                    <input type="checkbox" name="specials" id="gallery">
+                    <label class="checkbox-props" for="gallery">Галерея</label>
+                    <input type="checkbox" name="specials" id="trashcum">
+                    <label class="checkbox-props" for="trashcum">Корзина</label>
+                    <button type="button" class="show-button">Показать</button>
+                </div>
+                <div class="cards-products">
+                    <div class="filter-rate">
+                        <p class="section-name">Сортировать:</p>
+                        <ul class="filter-rate-properties">
+                            <li class="rate-item">По цене</li>
+                            <li class="rate-item">По типу</li>
+                            <li class="rate-item">По названию</li>
+                        </ul>
+                        <span class="filter-way"></span>
+                        <span class="filter-way"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <section class="contact-us">
+        <div class="container">
+            <div class="contact-datas">
+                <h2 class="name">NЁRDS DESIGN STUDIO</h2>
+                <p class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                <p class="phone">тел. +7 (812) 275-75-75</p>
+                <a href="#" class="btn btn-red">Напишите нам</a>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="socials">
+                <ul>
+                    <li class="social-item"><a href="#" class="social-link"></a></li>
+                    <li class="social-item"><a href="#" class="social-link"></a></li>
+                    <li class="social-item"><a href="#" class="social-link"></a></li>
+                </ul>
+                <div class="descript">
+                    <p class="motto">Давайте дружить, это выгодно!</p>
+                    <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
