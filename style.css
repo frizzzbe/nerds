@@ -45,6 +45,13 @@ ul{
 }
 .main-header img{
     width: 160px;
+    transition: opacity 0.2s;
+}
+.main-header img:hover{
+    opacity: 0.8;
+}
+.main-header img:active{
+    opacity: 0.3;
 }
 .main-header .links{
     width: 50%;
@@ -52,12 +59,32 @@ ul{
     display: flex;
     list-style: none;
 }
-.links-item a{
+.links-item,
+.trash{
+    position: relative;
+}
+.links-item a,
+.trash{
+    font-family: "Roboto Medium", Arial, sans-serif;
     color: #000;
     text-decoration: none;
+    transition: color .2s;
 }
-.links-item a:hover{
-    text-decoration: underline;
+.links-item a:hover,
+.trash:hover{
+    color: #FB565A;
+}
+.links-item a:active,
+.trash:active{
+    opacity: 0.3;
+}
+.links-item.active::after,
+.trash.active::after{
+    content: "";
+    display: block;
+    height: 2px;
+    transform: translateY(5px);
+    background-color: #FB565A;
 }
 .trash{
     font-family: "Roboto Medium", Arial, sans-serif;
@@ -101,17 +128,21 @@ ul{
     display: inline-block;
     background-color: #FB565A;
     padding: 20px 50px;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1);
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
 }
-.btn:hover{
-    text-decoration: underline;
-}
+.btn:active{ color: rgba(255, 255, 255, 0.3); }
 .btn-red{ background-color: #FB565A; }
 .btn-green{ background-color: #00CA74; }
 .btn-yellow{ background-color: #EFC84A; }
+.btn-red:hover{ background-color: #E74246; }
+.btn-green:hover{ background-color: #00BC6C; }
+.btn-yellow:hover{ background-color: #EAB534; }
+.btn-red:active{ background-color: #D7373B; }
+.btn-green:active{ background-color: #00AA62; }
+.btn-yellow:active{ background-color: #E5A722; }
 .motto .btn{
     margin-top: 42px;
     margin-bottom: 80px;
@@ -201,10 +232,13 @@ hr.divider{
 .clients img{
     margin: 15px;
     opacity: 0.2;
-    transition: opacity .4s;
+    transition: opacity .2s;
 }
 .clients img:hover{
-    opacity: 0.8;
+    opacity: 1;
+}
+.clients img:active{
+    opacity: 0.1;
 }
 .contact-us{
     background: url(./img/map.jpeg);
@@ -236,6 +270,15 @@ hr.divider{
     margin: auto 10px;
     border-radius: 50%;
     background-color: #E1E1E1;
+}
+.main-footer .social-item:hover{
+    background-color: #E74246;
+}
+.main-footer .social-item:active{
+    background-color: #D7373B;
+}
+.social-item:active .social-link{
+    opacity: 0.3;
 }
 .social-item .social-link{
     display: inline-block;
