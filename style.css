@@ -16,6 +16,9 @@
             url("./fonts/web/robotobold.woff2") format("woff2");
     font-weight: 700;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;

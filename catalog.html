@@ -11,10 +11,10 @@
             <nav class="navigation">
                 <img src="./img/nerds-logo.svg" alt="logo">
                 <ul class="links">
-                    <li class="links-item"><a href="#">Студия</a></li>
-                    <li class="links-item"><a href="#">Клиенты</a></li>
+                    <li class="links-item"><a href="index.html#study">Студия</a></li>
+                    <li class="links-item"><a href="index.html#clients">Клиенты</a></li>
                     <li class="links-item active"><a href="#">Магазин</a></li>
-                    <li class="links-item"><a href="#">Контакты</a></li>
+                    <li class="links-item"><a href="index.html#contacts">Контакты</a></li>
                 </ul>
                 <button class="trash" type="button">Корзина</button>
             </nav>
@@ -55,7 +55,7 @@
                     <label class="checkbox-props" for="slider">Слайдер</label>
                     <input type="checkbox" name="specials" id="advantages">
                     <label class="checkbox-props" for="advantages">Блок преимуществ</label>
-                    <input type="checkbox" name="specials" id="news">
+                    <input type="checkbox" name="specials" id="news" checked>
                     <label class="checkbox-props" for="news">Новости</label>
                     <input type="checkbox" name="specials" id="gallery">
                     <label class="checkbox-props" for="gallery">Галерея</label>
@@ -71,8 +71,68 @@
                             <li class="rate-item">По типу</li>
                             <li class="rate-item">По названию</li>
                         </ul>
-                        <span class="filter-way"></span>
-                        <span class="filter-way"></span>
+                        <div class="ways">
+                            <span class="filter-way filter-way__down current"></span>
+                            <span class="filter-way filter-way__up"></span>
+                        </div>
+                    </div>
+                    <section class="cards">
+                        <div class="card">
+                            <img src="./img/cards/img-sedona.jpeg" alt="sedona">
+                            <div class="info-card">
+                                <h2>Sedona</h2>
+                                <p>Информационный сайт  для туристов</p>
+                                <a href="#" class="btn btn-red">9 900 руб.</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./img/cards/img-pink.jpeg" alt="sedona">
+                            <div class="info-card">
+                                <h2>Pink App</h2>
+                                <p>Продуктовый лендинг приложения для iOS и Android</p>
+                                <a href="#" class="btn btn-red">9 900 руб.</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./img/cards/img-barbershop.jpeg" alt="sedona">
+                            <div class="info-card">
+                                <h2>Barbershop</h2>
+                                <p>Сайт салона красоты. Для мужчин, да.</p>
+                                <a href="#" class="btn btn-red">9 900 руб.</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./img/cards/img-mishka.jpeg" alt="sedona">
+                            <div class="info-card">
+                                <h2>MISHKA</h2>
+                                <p>Интернет-магазин вязаных игрушек.</p>
+                                <a href="#" class="btn btn-red">9 900 руб.</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./img/cards/img-aplus.jpeg" alt="sedona">
+                            <div class="info-card">
+                                <h2>A Plus</h2>
+                                <p>Лендинг курсов повышения квалификации</p>
+                                <a href="#" class="btn btn-red">9 900 руб.</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./img/cards/img-kvast.jpeg" alt="sedona">
+                            <div class="info-card">
+                                <h2>КВАСТ</h2>
+                                <p>Промо-сайт производителя крафтового кваса</p>
+                                <a href="#" class="btn btn-red">9 900 руб.</a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="pagination">
+                        <ul>
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li class="next">Следующая</li>
+                        </ul>
                     </div>
                 </div>
             </section>

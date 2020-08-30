@@ -16,6 +16,9 @@
             url("./fonts/web/robotobold.woff2") format("woff2");
     font-weight: 700;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -129,6 +132,7 @@ ul{
 
 .products{
     display: flex;
+    justify-content: space-between;
 }
 .pricing{
     width: 265px;
@@ -247,24 +251,159 @@ input[name="specials"]:checked + .checkbox-props::before{
     background: url('./img/checkbox-on.svg');
 }
 .show-button{
+    font-family: "Roboto Medium", Arial, sans-serif;
     display: block;
+    color: rgba(0, 0, 0, 1);
     width: 100%;
     margin: 60px auto;
     padding: 19px 0;
     background-color: #EEEEEE;
     border-radius: 3px;
     border: none;
+    cursor: pointer;
     text-transform: uppercase;
 }
+.show-button:hover{
+    background-color: #DFDFDF;
+}
+.show-button:active{
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #D5D5D5;
+}
 
+.cards-products{
+    margin-left: 20px;
+    width: 760px;
+}
+.filter-rate{
+    margin-top: 60px;
+}
+.filter-rate .section-name{
+    margin: 0;
+}
 .filter-rate,
 .filter-rate .filter-rate-properties{
     display: flex;
+    justify-content: space-between;
 }
 .filter-rate .filter-rate-properties{
+    justify-content: flex-end;
+    margin: 0;
+    margin-left: auto;
     list-style: none;
 }
+.rate-item{
+    text-transform: uppercase;
+    margin: 0 26px;
+    cursor: pointer;
+}
+.ways{
+    margin-left: 18px;
+}
+.filter-way{
+    margin: 0 9px;
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.filter-way.current{
+    opacity: 1;
+}
 
+.filter-way__down{
+    background: url('./img/icon-down-dir.svg');
+    background-size: cover;
+}
+.filter-way__up{
+    background: url('./img/icon-up-dir.svg');
+    background-size: cover;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    position: relative;
+    box-sizing: border-box;
+    max-width: 360px;
+    min-width: 260px;
+    width: 41%;
+    margin: 40px 20px;
+    overflow: hidden;
+}
+.card::before{
+    content: "";
+    display: block;
+    height: 40px;
+    opacity: 0.4;
+    background: url('./img/browser.svg');
+}
+.card:hover::before{
+    opacity: 1;
+}
+.info-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    padding-top: 1px;
+    width: 100%;
+    height: 230px;
+    background-color: #EEEEEE;
+    text-align: center;
+    transition: transform 0.4s;
+}
+.info-card > *{
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80%;
+}
+.info-card > h2{
+    text-transform: uppercase;
+}
+.info-card > p{
+    color: #666666;
+}
+.info-card > .btn{
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin: 0;
+    width: 60%;
+}
+
+.card:hover > .info-card{
+    transform: translateY(-100%);
+}
+
+.pagination ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+.pagination li{
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Roboto Medium", Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #EEEEEE;
+    padding: 14px 0;
+    text-align: center;
+    width: 50px;
+    margin: 11px;
+}
+.pagination .active{
+    border: 3px solid #DBDBDB;
+    background-color: #FFFFFF;
+}
+.pagination .next{
+    width: 260px;
+}
 .contact-us{
     background: url(./img/map.jpeg);
     background-size: cover;
@@ -337,15 +476,46 @@ input[name="specials"]:checked + .checkbox-props::before{
 .descript p{
     margin: 12px 0;
 }
+
+@media (max-width: 1100px){
+    .rate-item{
+        font-size: 14px;
+        white-space: nowrap;
+        margin: 0 10px;
+    }
+}
 @media (max-width: 910px){
-    .main-header .motto{
-        background-size: 100%;
+    .products{
+        flex-direction: column;
+        align-items: center;
     }
     .main-header .links{
         display: none;
     }
+    .cards-products {
+        margin-left: 0;
+        width: 100%;
+    }
+    /* .filter-rate{
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    } */
+    .filter-rate .filter-rate-properties{
+        margin-left: 0;
+    }
+    .cards-products .filter-rate > *{
+        margin: 10px 0;
+    }
 }
 @media (max-width: 700px){
+    .filter-rate{
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
     .socials{
         flex-direction: column;
         justify-content: space-around;
